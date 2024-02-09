@@ -36,7 +36,7 @@ modifiedpeptide mp2 ON si.pep2_id = mp2.id AND si.upload_id = mp2.upload_id INNE
 peptideevidence pe2 ON mp2.id = pe2.peptide_ref AND mp2.upload_id = pe2.upload_id INNER JOIN
 dbsequence dbs2 ON pe2.dbsequence_ref = dbs2.id AND pe2.upload_id = dbs2.upload_id INNER JOIN
 upload u on u.id = si.upload_id
-where u.id = ANY (array[45, 46, 47, 48]) and mp1.link_site1 > 0 and mp2.link_site1 > 0 AND pe1.is_decoy = false AND pe2.is_decoy = false
+where u.id = ANY (array[12, 13, 14, 15]) and mp1.link_site1 > 0 and mp2.link_site1 > 0 AND pe1.is_decoy = false AND pe2.is_decoy = false
 ;"""
 
         before = time()
